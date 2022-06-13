@@ -4,6 +4,8 @@
 [제안내용]
 1. 셀러 등급화 서비스 
 2. 데이터 적재방식 변경 
+3. 유통, 물류 문제 개선을 위한 물류 전담 파트너사 및 자체 유통 허브 구축 제안
+
 
 [분석 방법]
 - Skill : Python
@@ -20,14 +22,17 @@
 2016년부터 2018년까지 브라질의 여러 마켓플레이스에서 이루어진 100,000개의 주문에 대한 정보가 포함되어 있어 이커머스 비즈니스 분석에 용이할 뿐만 아니라 실제 기업 데이터를 활용해 이커머스 및 리테일과 관련된 비즈니스 문제를 정의할 수 있고, 비즈니스 인사이트와 개선점을 도출할 수 있어 해당 데이터셋을 선택하였다
 
 # 3. Purpose
-
-1. 셀러 등급화에 대한 정보를 대시보드 형태로 요약하여 제공
+[브라질 e-commerce 기업 Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 데이터를 사용하여 
+1. 셀러 등급화에 대한 구체적인 대안 제시 
 2. 플랫폼 내부적으로 가진 데이터 문제 개선방안을 대시보드 형태로 요약하여 제공
+3. 리뷰데이터 분석을 통한 고객 불만사항 파악 및 개선점 제시
+위 세가지의 인사이트를 도출하고자 한다.
 
+# 4. Data Schema
+![image](https://user-images.githubusercontent.com/102460827/173338429-97269ee8-28d3-41fa-8191-c20ee39ae04d.png)
 
-# 4. Data
+![image](https://user-images.githubusercontent.com/102460827/173338444-dd79b486-312e-4ac0-ada3-405736c21194.png)
 
-[브라질 e-commerce 기업 Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 데이터를 사용하여 *seller*관련 dataet 이용
 
 1. glowpick_products
 
@@ -57,32 +62,28 @@ product_url | string | 해당 제품의 url
 
 # 5. How to Run
 
-**Data Crawling**
+**Exploratory Data Analysis**
 ```bash
-$ python glowpick.py
-$ python reviews.py
+$ olist_seller_analysis.py
+$ olist_orders_analysis.py
+$ olist_review_analysis.py
 ```
 
-**Preprocessing**
+**visualization**
 ```bash
-$ bash preprocessing.sh
+$ Pareto analysis with Tableau
 ```
 
-**Test**
-```bash
-$ bash test.sh "검색문장"
-```
 
-# 6. Experiments
+# 6. SPIs (Selected Problem Investigations)
 
-## 6.1. 군집분석(Clustering Analysis)
+## 6.1. 셀러 세분화를 통한 우수 셀러 집중관리(Pareto chart with Python and Tableau)  
+
 
 사용자별 특성을 파악하기위해 군집 분석을 하였다. 앞서 전처리한 임베딩 벡터를 통해서 k-means 시행했다. 최적의 k를 구하기위해 1부터 9까지 k-means를 실행한 후 clustering 결과마다 Inertia 값을 비교하여 그 차이가 줄어드는 지점의 k로 결정한다.
 
-<p align="center">
-    <img src="https://github.com/DataNetworkAnalysis/Cosmetic-Recommendation-for-Man/blob/master/images/arms.png?raw=true" width='400'><br>
-    <i>Figure 1</i>
-</p>
+![image](https://user-images.githubusercontent.com/102460827/173336060-0d9e2ef5-438a-4d42-a63c-aa890f09bc89.png)
+
 
 적절한 군집수는 6으로 결정했고 각 결과에 대해 시각화하기 위해서 차원축소 방법 중 하나인 주성분분석(Principle Component Analysis)를 사용한다. 임베딩 벡터 차원 수를 시각화할 수 있도록 2차원으로 축소 후 클래스별로 산점도를 그렸다.
 
