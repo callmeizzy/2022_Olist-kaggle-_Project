@@ -36,31 +36,53 @@
 ![image](https://user-images.githubusercontent.com/102460827/173338444-dd79b486-312e-4ac0-ada3-405736c21194.png)
 
 
-1. glowpick_products
+1. Olist_Sellers
 
 Feature | Type | Description
 ---|---|---
-brand | string | 브랜드명
-product | string | 제품명
-vol_price | string | 해당 제품의 용량 & 가격
-rate | float | 해당 제품의 평점
-nb_reviews | string | 해당 제품의 리뷰 수
-sales_rank | string | 해당 카테고리의 판매 순위
-product_url | string | 해당 제품의 url 
-category | string | 카테고리
-title | string | 대분류
+seller_id | string | 판매자 고유 아이디 [중복불가 PK]
+seller_zip_code_prefix | string | 판매자 우편번호
+seller_city | string | 판매자 거주 도시 
+seller_state | string | 판매자 거주 주
 
-2. glowpick_reviews
+
+2. Olist_Order_Items
 
 Feature | Type | Description
 ---|---|---
-date | string | 댓글 단 날짜 (수집일 기준)
-user_id | string | 유저 ID
-sex | string | 성별
-age_skin_type | string | 나이 & 피부 유형 (건성/지성/중성/복합성/민감성)
-rate | string | 선호도 (best/good/soso/bad/worst)
-content | string | 리뷰 내용
-product_url | string | 해당 제품의 url
+order_id | string | 주문번호 
+order_item_id | string | order_id 안에서 파생된 제품의 고유한 id (반품시 개별관리 위해 생성된 것으로 보임)
+product_id | string | 제품 고유 아이디 [중복불가 PK]
+seller_id | string | 판매자 고유 아이디 [중복불가 PK]
+shipping_limit_date | string | 상품이 배송되어야 하는 날짜 
+price | string | 가격
+freight_value | string | 운임
+
+
+3. Olist_Orders
+
+Feature | Type | Description
+---|---|---
+order_id | string | 주문번호
+customer_id | string | 고객별 주문번호 [중복불가 PK]
+order_status | string | 주문 상태 
+order_purchase_timestamp | string | 주문일자
+order_approved_at | string | 지불 승인 일자
+order_delivered_carrier_date | string | 송장이 나온 날짜 
+order_deliverd_customer_date | string | 배송완료일자
+order_estimated_delivery_date | string | 배송예정일
+
+
+4. Olist_Customers
+
+Feature | Type | Description
+---|---|---
+customer_id | string | 고객별 주문번호 [중복불가 PK]
+customer_unique_id | string | 고객 고유 계정 아이디  [중복이 허용되는 고유값]
+customer_zip_code_profix | string | 고객 우편 번호
+customer_city | string | 고객 거주지 (시)
+customer_state | string | 고객 거주지 (주)
+
 
 # 5. How to Run
 
