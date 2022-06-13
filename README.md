@@ -23,9 +23,11 @@
 
 # 3. Purpose
 [브라질 e-commerce 기업 Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 데이터를 사용하여 
+
 1. 셀러 등급화에 대한 구체적인 대안 제시 
 2. 플랫폼 내부적으로 가진 데이터 문제 개선방안을 대시보드 형태로 요약하여 제공
 3. 리뷰데이터 분석을 통한 고객 불만사항 파악 및 개선점 제시
+
 위 세가지의 인사이트를 도출하고자 한다.
 
 # 4. Data Schema
