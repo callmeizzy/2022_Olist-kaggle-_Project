@@ -8,11 +8,7 @@
 
 
 **★ 분석 방법**
-- Skill : Python
-- Visualization Tool : Tableau
-- API : Wordcloud / Google Translation
-- Ideation Tool : Notion /  Miro
-- Status : Complete
+![image](https://user-images.githubusercontent.com/102460827/174919680-c9855294-27cd-44fc-826e-dd230d33c0e6.png)
 
 
 
