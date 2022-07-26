@@ -47,7 +47,7 @@
  
  ex)  등급 별 판매 수수료율 차등 혹은 앱 내 제품의 상단 노출과 같은 benefit 제공  
  
- ****셀러를 5 그룹으로 세분화 하면 **최상위  10%**셀러는 전체 판매의 **60.59% , 상위 20%** 셀러는 **82.57%**의 비중을 가지고 있다.  ****
+셀러를 5 그룹으로 세분화 하면 **최상위  10%**셀러는 전체 판매의 **60.59% , 상위 20%** 셀러는 **82.57%**의 비중을 가지고 있다. 
 
 ![image](https://user-images.githubusercontent.com/102460827/180957362-2d8b02a1-0568-486d-b1c8-91e796e6c8d1.png)
 
@@ -74,22 +74,22 @@
 ## [가설 & 분석 2] **셀러의 Retention rate가 낮아서 그런 것인가? - Retention Ratio 분석**
 
  heatmap이 의미하는 건 셀러들의 **판매 리텐션은 꾸준히 유지되고 있다**는 점이다.
+
+월 별 cohort_ratio의 평균을 구하고 이를 total_retention에 할당한 후 데이터 프레임 및  plot으로 시각화했다. 
  
- ****월 별 cohort_ratio의 평균을 구하고 이를 total_retention에 할당한 후 데이터 프레임 및  plot으로 시각화했다. 
- 
- ****셀러 리텐션 그래프 분석결과, 
+ 셀러 리텐션 그래프 분석결과, 
  
  전체 기간 내 리텐션 비율이 **4~50%정도로 올리스트 플랫폼에 잔존하는 셀러의 비중**도 높다.
  
  **올리스트는 진정한 고객인 셀러의 리텐션을 성공적으로 보유하고 있다.**
 
-**[Heatmap CODE]**
+[Heatmap CODE]
 
 ![image](https://user-images.githubusercontent.com/102460827/180957668-33725d6c-bfb7-4d6d-a02d-5bec6f0e7a2a.png)
 
 ![image](https://user-images.githubusercontent.com/102460827/180957538-b25d9817-c8b9-4ccc-bc3e-57639f35dcc4.png)
 
-**[Retention Ratio Graph CODE]**
+[Retention Ratio Graph CODE]
 ![image](https://user-images.githubusercontent.com/102460827/180957686-969ed209-8ff3-4383-b790-41becb51f1e3.png)
 
 ![image](https://user-images.githubusercontent.com/102460827/180957603-0b94adf1-aa0c-4e46-9910-10ab43444dda.png)
@@ -100,7 +100,7 @@
 
 ## [가설 & 분석 3] 그렇다면, 셀러를 몇 개의 그룹으로 나누어야 하는가? **- RFM 분석 & Pareto Chart 시각화**
 
- ***Q = 3 (Before)***
+ `Q = 3 (Before)`
 
  RFM 설정을 위한 Q컷 분석을 (Silver, Gold, Platinum) 3구간으로 나누어 진행를 하였으나, 
  
@@ -116,7 +116,7 @@
 
 ![image](https://user-images.githubusercontent.com/102460827/180959086-c1a51d15-1b4b-4f29-9e58-eb249f7b0b15.png)
 
- `***Q = 5 (After)*`
+ `Q = 5 (After)`
 
  더 세분화** 된 5 등급(Bronze, Silver, Gold, Platinum, Diamond) 으로 나누어 분석을 재 진행하였다.
  
