@@ -1,13 +1,12 @@
 # 1.OLIST 데이터셋을 통한 비즈니스 솔루션 제안
 
- **셀러 / 데이터 관리 / 고객&리뷰 , 3가지 sector에서 제안하는 개선점** (클릭하시면 해당 제안으로 이동)
+ **셀러 / 데이터 관리 / 고객&리뷰 , 3가지 sector에서 제안하는 개선점**
   
- 포트폴리오 링크: https://callmeizzy.notion.site/Main-project-1-Olist-from-Kaggle-e3436eb112234d18b7f1bcee14695471
 
-1. [RFM 분석을 통한 SELLER 별 등급화 차등관리 (Seller Grading Recommendation)](https://www.notion.so/Main-project-1-Olist-from-Kaggle-e3436eb112234d18b7f1bcee14695471)
-2. **[플랫폼 내부적 문제 : 데이터 적재 방식 개선 (Internal Data Recommendation)](https://www.notion.so/Main-project-1-Olist-from-Kaggle-e3436eb112234d18b7f1bcee14695471)**
-3. **[리뷰데이터 분석을 통한 고객 불만 사항 파악 및 물류 차원의 개선점 제시 (Logistics Recommendation)](https://www.notion.so/Main-project-1-Olist-from-Kaggle-e3436eb112234d18b7f1bcee14695471)**
 
+1. [RFM 분석을 통한 SELLER 별 등급화 차등관리 (Seller Grading Recommendation)]
+2. **[플랫폼 내부적 문제 : 데이터 적재 방식 개선 (Internal Data Recommendation)]
+3. **[리뷰데이터 분석을 통한 고객 불만 사항 파악 및 물류 차원의 개선점 제시 (Logistics Recommendation)]
 ---
 
 # 2. DataSet 선정이유
